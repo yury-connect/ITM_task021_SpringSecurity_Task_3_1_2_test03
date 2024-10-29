@@ -2,11 +2,12 @@ package com.DBAuthExample.AuthExample.Controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @RequestMapping("test/")
 @AllArgsConstructor
 public class TestController {
@@ -16,7 +17,7 @@ public class TestController {
      */
     @GetMapping("/welcome")
     public String welcome(){
-        return "This is unprotected page";
+        return "welcome_page";
     }
 
     /*
@@ -25,7 +26,8 @@ public class TestController {
     @GetMapping("/users")
     @PreAuthorize("hasAuthority('ROLE_USER')")
     public String pageForUser(){
-        return "This is page for only users";
+//        return "This is page for only users";
+        return "users_page";
     }
 
 
@@ -35,7 +37,7 @@ public class TestController {
     @GetMapping("/admins")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public String pageForAdmins(){
-        return "This is page for only admins";
+        return "admin_page";
     }
 
 
@@ -44,6 +46,7 @@ public class TestController {
      */
     @GetMapping("/all")
     public String pageForAll(){
-        return "This is page for all employees";
+//        return "This is page for all employees";
+        return "all_page";
     }
 }
