@@ -7,8 +7,10 @@ CREATE TABLE users_3 (
                          role VARCHAR(70)            -- Поле age, хранящее возраст как целое число
 );
 
-INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (1, 'user', '1234', 'ADMIN');
-INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (2, 'user1', '1234', 'ADMIN');
-INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (3, 'user2', '1234', 'USER');
+INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (1, 'user', '$2a$05$ppC7GcE5CtLHvX2gUHMFpeK7wpKf7Kdzfxp55b/.bEBZxDT9H7oe.', 'ADMIN'); # password = '1234'
+INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (2, 'user1', '$2a$05$ppC7GcE5CtLHvX2gUHMFpeK7wpKf7Kdzfxp55b/.bEBZxDT9H7oe.', 'ADMIN'); # password = '1234'
+INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (3, 'user2', '$2a$05$ppC7GcE5CtLHvX2gUHMFpeK7wpKf7Kdzfxp55b/.bEBZxDT9H7oe.', 'USER'); # password = '1234'
+INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (4, 'admin', '$2a$05$ppC7GcE5CtLHvX2gUHMFpeK7wpKf7Kdzfxp55b/.bEBZxDT9H7oe.', 'ADMIN'); # password = '1234'
+INSERT INTO itm_task021_spring_security_task_3_1_2_db.users_3 (id, name, password, role) VALUES (5, 'admin2', '$2a$05$ppC7GcE5CtLHvX2gUHMFpeK7wpKf7Kdzfxp55b/.bEBZxDT9H7oe.', 'ADMIN'); # password = '1234'
 
 SELECT * FROM users_3;
