@@ -5,7 +5,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
 
 @Controller
 @RequestMapping("test/")
@@ -20,13 +20,13 @@ public class TestController {
         return "welcome_page";
     }
 
+
     /*
     users — страница для тех, кто имеет роль USER в базе данных;
      */
     @GetMapping("/users")
     @PreAuthorize("hasAuthority('ROLE_USER')")
     public String pageForUser(){
-//        return "This is page for only users";
         return "users_page";
     }
 
@@ -46,7 +46,6 @@ public class TestController {
      */
     @GetMapping("/all")
     public String pageForAll(){
-//        return "This is page for all employees";
         return "all_page";
     }
 }

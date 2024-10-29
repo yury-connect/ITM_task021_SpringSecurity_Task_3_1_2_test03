@@ -1,6 +1,5 @@
 package com.DBAuthExample.AuthExample.Config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -31,18 +30,15 @@ public class SecurityConfig {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(userDetailsService());
         provider.setPasswordEncoder(passwordEncoder());
-
-        System.out.println("password 1234 = " + passwordEncoder().encode("1234"));
-
         return provider;
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return  http
+        return http
                 .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.requestMatchers("test/welcome").permitAll() //вход без авторизации
-                        .requestMatchers("test/**").authenticated()) //с авторизацией и аутентификацией
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/test/welcome").permitAll() // вход без авторизации
+                        .requestMatchers("/test/**").authenticated()) // с авторизацией и аутентификацией
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .build();
     }
