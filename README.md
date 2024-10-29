@@ -6,20 +6,25 @@
 ---
 > ### Основные *URL*:
 > 
-> **выход**
-> `http://localhost:8080/logout` - 
+> > **выход**
+> >
+> > `http://localhost:8080/logout`
 > 
-> **welcome** — страница будет показываться всем, даже без прохождения авторизации;
-> `http://localhost:8080/test/welcome` 
+> > **welcome** — страница будет показываться всем, даже без прохождения авторизации;
+> >
+> > `http://localhost:8080/test/welcome`
 > 
-> **users** — страница для тех, кто имеет роль USER в базе данных;
-> `http://localhost:8080/test/users` 
+> > **users** — страница для тех, кто имеет роль USER в базе данных;
+> >
+> > `http://localhost:8080/test/users`
 > 
-> **admins** — для всех админов;
-> `http://localhost:8080/test/admins` 
+> > **admins** — для всех админов;
+> >
+> > `http://localhost:8080/test/admins`
 > 
-> **all** — для всех, но после авторизации.
-> `http://localhost:8080/test/all` 
+> > **all** — для всех, но после авторизации.
+> >
+> > `http://localhost:8080/test/all`
 
 ---
 
