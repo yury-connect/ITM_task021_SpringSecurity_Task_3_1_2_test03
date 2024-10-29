@@ -1,10 +1,11 @@
 # SpringSecurity-6-Authorization-and-Authentication
 ## Simple example of Database authorization/authentication using SpringSecurity 6
 
-### В репозитории хранится минимальный проект, который будет хорошим шаблоном для старта работы со SpringSecurity 6.
+#### В репозитории хранится минимальный проект, который будет хорошим шаблоном для старта работы со SpringSecurity 6.
 
 ---
-> ### Основные *URL*:
+>>>>> ### Основные *URL*:
+> 
 > 
 > `http://localhost:8080/logout` - **выход**
 > 
@@ -18,7 +19,9 @@
 
 ---
 
-[Статья на _habr.com_](https://habr.com/ru/articles/798921/)
+[**Статья** на _habr.com_](https://habr.com/ru/articles/798921/)
+
+[_скрин статьи_](materials/Авторизация_и_аутентификация_.html)
 
 [**Оригинальный** репозиторий автора статьи](https://github.com/KirillKARLSON/SpringSecurity-6-Authorization-and-Authentication)
 
