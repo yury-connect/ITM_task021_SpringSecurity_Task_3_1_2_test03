@@ -9,11 +9,17 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+
 public class MyUserDetails implements UserDetails {
+
     private User user;
+
+
     public MyUserDetails(User user){
         this.user = user;
     }
+
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.stream(user.getRole().split(", "))
@@ -26,6 +32,7 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public String getUsername() { return user.getName(); }
+
 
     @Override
     public boolean isAccountNonExpired() { return true; }

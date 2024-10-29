@@ -11,11 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class TestController {
 
+    /*
+    welcome — страница будет показываться всем, даже без прохождения авторизации;
+     */
     @GetMapping("/welcome")
     public String welcome(){
         return "This is unprotected page";
     }
 
+    /*
+    users — страница для тех, кто имеет роль USER в базе данных;
+     */
     @GetMapping("/users")
     @PreAuthorize("hasAuthority('ROLE_USER')")
     public String pageForUser(){
@@ -23,6 +29,9 @@ public class TestController {
     }
 
 
+    /*
+    admins — для всех админов;
+     */
     @GetMapping("/admins")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public String pageForAdmins(){
@@ -30,9 +39,11 @@ public class TestController {
     }
 
 
+    /*
+    all — для всех, но после авторизации.
+     */
     @GetMapping("/all")
     public String pageForAll(){
         return "This is page for all employees";
     }
-
 }

@@ -15,10 +15,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
+
     @Bean //возвращаем кастомный MyUserDetailsService, который напишем далее
     public UserDetailsService userDetailsService(){
         return new MyUserDetailsService();
@@ -41,9 +43,9 @@ public class SecurityConfig {
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .build();
     }
+
     @Bean //Ставим степень кодировки, с которой кодировали пароль в базе
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder(5);
     }
-
 }
